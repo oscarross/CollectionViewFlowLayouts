@@ -18,7 +18,7 @@ class Mock {
     static func load() -> [Mock] {
         var objects: [Mock] = [Mock]()
         
-        for i in 0...50 {
+        for i in 0...80 {
             if let image = UIImage(named: "MOCK_\(i)") {
                 let mock = Mock(image)
                 objects.append(mock)
