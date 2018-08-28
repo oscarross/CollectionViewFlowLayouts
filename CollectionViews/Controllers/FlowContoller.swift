@@ -25,6 +25,8 @@ final class FlowContoller {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
         
+        viewController.title = "Carousel"
+        
         return viewController
     }
 }

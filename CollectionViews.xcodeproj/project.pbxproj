@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555159072135E91500E965B9 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555159062135E91500E965B9 /* ImageCell.swift */; };
 		55BE771421348C9B00D5BFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE771321348C9B00D5BFBD /* AppDelegate.swift */; };
 		55BE771B21348C9B00D5BFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55BE771A21348C9B00D5BFBD /* Assets.xcassets */; };
 		55BE771E21348C9B00D5BFBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BE771C21348C9B00D5BFBD /* LaunchScreen.storyboard */; };
 		55BE772621348CAC00D5BFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BE772521348CAC00D5BFBD /* Main.storyboard */; };
 		55BE773321348D3F00D5BFBD /* FlowContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE773121348D3F00D5BFBD /* FlowContoller.swift */; };
 		55BE773421348D3F00D5BFBD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE773221348D3F00D5BFBD /* MenuViewController.swift */; };
-		55BE773921348DBA00D5BFBD /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE773821348DBA00D5BFBD /* Image.swift */; };
+		55BE773921348DBA00D5BFBD /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE773821348DBA00D5BFBD /* Mock.swift */; };
 		55BE773B21348E6600D5BFBD /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE773A21348E6600D5BFBD /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		555159062135E91500E965B9 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		55BE771021348C9B00D5BFBD /* CollectionViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BE771321348C9B00D5BFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55BE771A21348C9B00D5BFBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,7 +28,7 @@
 		55BE772521348CAC00D5BFBD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		55BE773121348D3F00D5BFBD /* FlowContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowContoller.swift; sourceTree = "<group>"; };
 		55BE773221348D3F00D5BFBD /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		55BE773821348DBA00D5BFBD /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		55BE773821348DBA00D5BFBD /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		55BE773A21348E6600D5BFBD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 			children = (
 				55BE772521348CAC00D5BFBD /* Main.storyboard */,
 				55BE771C21348C9B00D5BFBD /* LaunchScreen.storyboard */,
+				555159062135E91500E965B9 /* ImageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,7 +103,7 @@
 		55BE773721348D7D00D5BFBD /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				55BE773821348DBA00D5BFBD /* Image.swift */,
+				55BE773821348DBA00D5BFBD /* Mock.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -177,10 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BE773321348D3F00D5BFBD /* FlowContoller.swift in Sources */,
-				55BE773921348DBA00D5BFBD /* Image.swift in Sources */,
+				55BE773921348DBA00D5BFBD /* Mock.swift in Sources */,
 				55BE773421348D3F00D5BFBD /* MenuViewController.swift in Sources */,
 				55BE771421348C9B00D5BFBD /* AppDelegate.swift in Sources */,
 				55BE773B21348E6600D5BFBD /* CollectionViewController.swift in Sources */,
+				555159072135E91500E965B9 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
