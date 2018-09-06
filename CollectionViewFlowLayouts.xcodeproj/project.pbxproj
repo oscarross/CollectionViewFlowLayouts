@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		555159072135E91500E965B9 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555159062135E91500E965B9 /* ImageCell.swift */; };
 		555159092135F45600E965B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555159082135F45500E965B9 /* Assets.xcassets */; };
+		555B82012141DB37003AD4B0 /* CarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555B82002141DB37003AD4B0 /* CarouselLayout.swift */; };
 		55BE771421348C9B00D5BFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE771321348C9B00D5BFBD /* AppDelegate.swift */; };
 		55BE771E21348C9B00D5BFBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BE771C21348C9B00D5BFBD /* LaunchScreen.storyboard */; };
 		55BE772621348CAC00D5BFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BE772521348CAC00D5BFBD /* Main.storyboard */; };
@@ -21,7 +22,8 @@
 /* Begin PBXFileReference section */
 		555159062135E91500E965B9 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		555159082135F45500E965B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		55BE771021348C9B00D5BFBD /* CollectionViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		555B82002141DB37003AD4B0 /* CarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayout.swift; sourceTree = "<group>"; };
+		55BE771021348C9B00D5BFBD /* CollectionViewFlowLayouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewFlowLayouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BE771321348C9B00D5BFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55BE771D21348C9B00D5BFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55BE771F21348C9B00D5BFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,10 +45,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		555B81FF2141DA02003AD4B0 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				555B82002141DB37003AD4B0 /* CarouselLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		55BE770721348C9B00D5BFBD = {
 			isa = PBXGroup;
 			children = (
-				55BE771221348C9B00D5BFBD /* CollectionViews */,
+				55BE771221348C9B00D5BFBD /* CollectionViewFlowLayouts */,
 				55BE771121348C9B00D5BFBD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,21 +64,22 @@
 		55BE771121348C9B00D5BFBD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55BE771021348C9B00D5BFBD /* CollectionViews.app */,
+				55BE771021348C9B00D5BFBD /* CollectionViewFlowLayouts.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		55BE771221348C9B00D5BFBD /* CollectionViews */ = {
+		55BE771221348C9B00D5BFBD /* CollectionViewFlowLayouts */ = {
 			isa = PBXGroup;
 			children = (
+				55BE771321348C9B00D5BFBD /* AppDelegate.swift */,
+				55BE773021348D3300D5BFBD /* Controllers */,
 				55BE773721348D7D00D5BFBD /* Data */,
+				555B81FF2141DA02003AD4B0 /* Layouts */,
 				55BE773621348D6700D5BFBD /* Resources */,
 				55BE773521348D5E00D5BFBD /* Views */,
-				55BE773021348D3300D5BFBD /* Controllers */,
-				55BE771321348C9B00D5BFBD /* AppDelegate.swift */,
 			);
-			path = CollectionViews;
+			path = CollectionViewFlowLayouts;
 			sourceTree = "<group>";
 		};
 		55BE773021348D3300D5BFBD /* Controllers */ = {
@@ -111,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55BE770F21348C9B00D5BFBD /* CollectionViews */ = {
+		55BE770F21348C9B00D5BFBD /* CollectionViewFlowLayouts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55BE772221348C9B00D5BFBD /* Build configuration list for PBXNativeTarget "CollectionViews" */;
+			buildConfigurationList = 55BE772221348C9B00D5BFBD /* Build configuration list for PBXNativeTarget "CollectionViewFlowLayouts" */;
 			buildPhases = (
 				55BE770C21348C9B00D5BFBD /* Sources */,
 				55BE770D21348C9B00D5BFBD /* Frameworks */,
@@ -123,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = CollectionViews;
+			name = CollectionViewFlowLayouts;
 			productName = CollectionViews;
-			productReference = 55BE771021348C9B00D5BFBD /* CollectionViews.app */;
+			productReference = 55BE771021348C9B00D5BFBD /* CollectionViewFlowLayouts.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,14 +147,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = rosolowski;
+				ORGANIZATIONNAME = "Oskar Rosolowski";
 				TargetAttributes = {
 					55BE770F21348C9B00D5BFBD = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
-			buildConfigurationList = 55BE770B21348C9B00D5BFBD /* Build configuration list for PBXProject "CollectionViews" */;
+			buildConfigurationList = 55BE770B21348C9B00D5BFBD /* Build configuration list for PBXProject "CollectionViewFlowLayouts" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -156,7 +167,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55BE770F21348C9B00D5BFBD /* CollectionViews */,
+				55BE770F21348C9B00D5BFBD /* CollectionViewFlowLayouts */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BE773321348D3F00D5BFBD /* FlowContoller.swift in Sources */,
+				555B82012141DB37003AD4B0 /* CarouselLayout.swift in Sources */,
 				55BE773921348DBA00D5BFBD /* Mock.swift in Sources */,
 				55BE773421348D3F00D5BFBD /* MenuViewController.swift in Sources */,
 				55BE771421348C9B00D5BFBD /* AppDelegate.swift in Sources */,
@@ -324,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4F59H86287;
-				INFOPLIST_FILE = CollectionViews/Resources/Info.plist;
+				INFOPLIST_FILE = CollectionViewFlowLayouts/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4F59H86287;
-				INFOPLIST_FILE = CollectionViews/Resources/Info.plist;
+				INFOPLIST_FILE = CollectionViewFlowLayouts/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,7 +369,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		55BE770B21348C9B00D5BFBD /* Build configuration list for PBXProject "CollectionViews" */ = {
+		55BE770B21348C9B00D5BFBD /* Build configuration list for PBXProject "CollectionViewFlowLayouts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55BE772021348C9B00D5BFBD /* Debug */,
@@ -366,7 +378,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55BE772221348C9B00D5BFBD /* Build configuration list for PBXNativeTarget "CollectionViews" */ = {
+		55BE772221348C9B00D5BFBD /* Build configuration list for PBXNativeTarget "CollectionViewFlowLayouts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55BE772321348C9B00D5BFBD /* Debug */,

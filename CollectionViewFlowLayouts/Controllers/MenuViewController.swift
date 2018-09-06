@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  collections
 //
-//  Created by oscar on 27/08/2018.
-//  Copyright © 2018 rosolowski. All rights reserved.
+//  Created by Oskar Rosolowski on 27/08/2018.
+//  Copyright © 2018 Oskar Rosolowski. All rights reserved.
 //
 
 import UIKit
@@ -12,6 +12,12 @@ final class MenuViewController: UITableViewController {
     
     private let styles: [CollectionStyle] = [.carousel]
     private let flowController: FlowContoller = FlowContoller()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = "Layouts"
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return styles.count

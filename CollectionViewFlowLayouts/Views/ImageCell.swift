@@ -2,8 +2,8 @@
 //  ImageCell.swift
 //  CollectionViews
 //
-//  Created by oscar on 28/08/2018.
-//  Copyright © 2018 rosolowski. All rights reserved.
+//  Created by Oskar Rosolowski on 28/08/2018.
+//  Copyright © 2018 Oskar Rosolowski. All rights reserved.
 //
 
 import UIKit
