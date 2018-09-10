@@ -1,14 +1,14 @@
 //
-//  CarouselLayout.swift
-//  CollectionViews
+//  HorizontalCarousel.swift
+//  CollectionViewFlowLayouts
 //
-//  Created by oscar on 07/09/2018.
+//  Created by oscar on 10/09/2018.
 //  Copyright © 2018 Oskar Rosolowski. All rights reserved.
 //
 
 import UIKit
 
-class CarouselLayout: UICollectionViewFlowLayout {
+class HorizontalCarouselLayout: UICollectionViewFlowLayout {
     struct Constants {
         static let itemAlpha: CGFloat = 0.5
         static let itemScale: CGFloat = 0.5
@@ -49,16 +49,16 @@ class CarouselLayout: UICollectionViewFlowLayout {
         guard
             let collectionView = collectionView,
             let layoutAttributes = layoutAttributesForElements(in: collectionView.bounds)
-        else {
-            return .zero
+            else {
+                return .zero
         }
         
-        let center = collectionView.bounds.size.height / 2
-        let proposedContentOffsetCenterOrigin = proposedContentOffset.y + center
+        let center = collectionView.bounds.size.width / 2
+        let proposedContentOffsetCenterOrigin = proposedContentOffset.x + center
         
-        let closest = layoutAttributes.sorted { abs($0.center.y - proposedContentOffsetCenterOrigin) < abs($1.center.y - proposedContentOffsetCenterOrigin) }.first ?? UICollectionViewLayoutAttributes()
+        let closest = layoutAttributes.sorted { abs($0.center.x - proposedContentOffsetCenterOrigin) < abs($1.center.x - proposedContentOffsetCenterOrigin) }.first ?? UICollectionViewLayoutAttributes()
         
-        let targetContentOffset = CGPoint(x: proposedContentOffset.x, y: floor(closest.center.y - center))
+        let targetContentOffset = CGPoint(x: floor(closest.center.x - center), y: proposedContentOffset.y)
         
         return targetContentOffset
     }
@@ -69,10 +69,14 @@ class CarouselLayout: UICollectionViewFlowLayout {
             return
         }
         
-        itemSize = Constants.itemSize
-        minimumLineSpacing = -(Constants.itemSize.height * 0.5)
-        
         collectionView.decelerationRate = .fast
+        
+        scrollDirection = .horizontal
+        minimumLineSpacing = -(Constants.itemSize.height * 0.2)
+        itemSize = Constants.itemSize
+        
+        let inset = (collectionView.bounds.width - itemSize.width) / 2
+        collectionView.contentInset = .init(top: 0, left: inset, bottom: 0, right: inset)
         
         let collectionSize = collectionView.bounds.size
         let yInset = (collectionSize.height - itemSize.height) / 2
@@ -84,19 +88,23 @@ class CarouselLayout: UICollectionViewFlowLayout {
     private func changeLayoutAttributes(_ attributes: UICollectionViewLayoutAttributes) {
         guard let collectionView = collectionView else { return }
         
-        let collectionCenter = collectionView.frame.size.height / 2
-        let offset = collectionView.contentOffset.y
-        let normalizedCenter = attributes.center.y - offset
+        let collectionCenter = collectionView.bounds.size.width / 2
+        let offset = collectionView.contentOffset.x
+        let normalizedCenter = attributes.center.x - offset
         
-        let maxDistance = itemSize.height + minimumLineSpacing
-        let distance = min(abs(collectionCenter - normalizedCenter), maxDistance)
-        let ratio = (maxDistance - distance) / maxDistance
+        let maxDistance = itemSize.width + minimumLineSpacing
+        let distance = min(collectionCenter - normalizedCenter, maxDistance)
+        let ratio = (maxDistance - abs(distance)) / maxDistance
         
         let alpha = ratio * (1 - Constants.itemAlpha) + Constants.itemAlpha
         let scale = ratio * (1 - Constants.itemScale) + Constants.itemScale
-        
         attributes.alpha = alpha
-        attributes.transform3D = CATransform3DScale(CATransform3DIdentity, scale, scale, 1)
+        
+        let angleToSet = distance / (collectionView.bounds.width / 2)
+        var transform = CATransform3DScale(CATransform3DIdentity, scale, scale, 1)
+        transform.m34 = 1.0 / 400
+        transform = CATransform3DRotate(transform, angleToSet, 0, 1, 0)
+        attributes.transform3D = transform
         attributes.zIndex = Int(alpha * 10)
     }
 }

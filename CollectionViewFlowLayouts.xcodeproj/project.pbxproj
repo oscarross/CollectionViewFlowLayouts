@@ -17,6 +17,11 @@
 		55BE773421348D3F00D5BFBD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE773221348D3F00D5BFBD /* MenuViewController.swift */; };
 		55BE773921348DBA00D5BFBD /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE773821348DBA00D5BFBD /* Mock.swift */; };
 		55BE773B21348E6600D5BFBD /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE773A21348E6600D5BFBD /* CollectionViewController.swift */; };
+		55DC93B72147048000371B0E /* StrechyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC93B62147048000371B0E /* StrechyHeaderViewController.swift */; };
+		55DC93B92147049700371B0E /* StrechyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC93B82147049700371B0E /* StrechyHeaderLayout.swift */; };
+		55DC93BB2147056100371B0E /* ImageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC93BA2147056100371B0E /* ImageHeaderView.swift */; };
+		55DC93BE214705DE00371B0E /* UICollectionView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC93BD214705DE00371B0E /* UICollectionView+Utils.swift */; };
+		55DC93C021470D4B00371B0E /* HorizontalCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC93BF21470D4B00371B0E /* HorizontalCarouselLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		55BE773221348D3F00D5BFBD /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		55BE773821348DBA00D5BFBD /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		55BE773A21348E6600D5BFBD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		55DC93B62147048000371B0E /* StrechyHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrechyHeaderViewController.swift; sourceTree = "<group>"; };
+		55DC93B82147049700371B0E /* StrechyHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrechyHeaderLayout.swift; sourceTree = "<group>"; };
+		55DC93BA2147056100371B0E /* ImageHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHeaderView.swift; sourceTree = "<group>"; };
+		55DC93BD214705DE00371B0E /* UICollectionView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Utils.swift"; sourceTree = "<group>"; };
+		55DC93BF21470D4B00371B0E /* HorizontalCarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCarouselLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				555B82002141DB37003AD4B0 /* CarouselLayout.swift */,
+				55DC93B82147049700371B0E /* StrechyHeaderLayout.swift */,
+				55DC93BF21470D4B00371B0E /* HorizontalCarouselLayout.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -77,6 +89,7 @@
 				55BE773721348D7D00D5BFBD /* Data */,
 				555B81FF2141DA02003AD4B0 /* Layouts */,
 				55BE773621348D6700D5BFBD /* Resources */,
+				55DC93BC214705B600371B0E /* Utils */,
 				55BE773521348D5E00D5BFBD /* Views */,
 			);
 			path = CollectionViewFlowLayouts;
@@ -88,6 +101,7 @@
 				55BE773121348D3F00D5BFBD /* FlowContoller.swift */,
 				55BE773221348D3F00D5BFBD /* MenuViewController.swift */,
 				55BE773A21348E6600D5BFBD /* CollectionViewController.swift */,
+				55DC93B62147048000371B0E /* StrechyHeaderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +111,7 @@
 			children = (
 				55BE772521348CAC00D5BFBD /* Main.storyboard */,
 				55BE771C21348C9B00D5BFBD /* LaunchScreen.storyboard */,
+				55DC93BA2147056100371B0E /* ImageHeaderView.swift */,
 				555159062135E91500E965B9 /* ImageCell.swift */,
 			);
 			path = Views;
@@ -117,6 +132,14 @@
 				55BE773821348DBA00D5BFBD /* Mock.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		55DC93BC214705B600371B0E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				55DC93BD214705DE00371B0E /* UICollectionView+Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DC93C021470D4B00371B0E /* HorizontalCarouselLayout.swift in Sources */,
 				55BE773321348D3F00D5BFBD /* FlowContoller.swift in Sources */,
 				555B82012141DB37003AD4B0 /* CarouselLayout.swift in Sources */,
+				55DC93B92147049700371B0E /* StrechyHeaderLayout.swift in Sources */,
+				55DC93BB2147056100371B0E /* ImageHeaderView.swift in Sources */,
+				55DC93B72147048000371B0E /* StrechyHeaderViewController.swift in Sources */,
 				55BE773921348DBA00D5BFBD /* Mock.swift in Sources */,
+				55DC93BE214705DE00371B0E /* UICollectionView+Utils.swift in Sources */,
 				55BE773421348D3F00D5BFBD /* MenuViewController.swift in Sources */,
 				55BE771421348C9B00D5BFBD /* AppDelegate.swift in Sources */,
 				55BE773B21348E6600D5BFBD /* CollectionViewController.swift in Sources */,

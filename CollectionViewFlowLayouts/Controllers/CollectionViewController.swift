@@ -9,15 +9,14 @@
 import UIKit
 
 class CollectionViewController: UICollectionViewController {
-    
     let objects = Mock.load()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.identifier)
+        collectionView.register(cellType: ImageCell.self)
+        collectionView.backgroundColor = .black
     }
-    
 }
 
 extension CollectionViewController {
@@ -26,15 +25,16 @@ extension CollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return objects.count
+        return self.objects.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath) as! ImageCell
-        
+        let cell = collectionView.dequeueReusableCell(for: indexPath) as ImageCell
         let mock = objects[indexPath.row]
         
         cell.configure(with: mock.image)
+        cell.contentView.layer.borderWidth = 10
+        cell.contentView.layer.borderColor = UIColor.white.cgColor
         
         return cell
     }

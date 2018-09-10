@@ -9,9 +9,15 @@
 import UIKit
 
 final class MenuViewController: UITableViewController {
-    
-    private let styles: [CollectionStyle] = [.carousel]
     private let flowController: FlowContoller = FlowContoller()
+    
+    private var styles: [CollectionStyle] {
+        return [
+            .carousel,
+            .horizontalCarousel,
+            .stretchyHeader,
+        ]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +43,4 @@ final class MenuViewController: UITableViewController {
         
         flowController.present(for: style, viewController: self)
     }
-    
 }
-
