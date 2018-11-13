@@ -2,4 +2,4 @@ language: swift
 osx_image: xcode10.1
 os: osx
 script:
-  - xcodebuild clean build -project CollectionViewFlowLayouts.xcodeproj -scheme CollectionViewFlowLayouts -destination "platform=iOS Simulator,name=iPhone 7,OS=10.3" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+  - fastlane create_travis_build
