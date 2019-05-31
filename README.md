@@ -3,17 +3,11 @@
 This repository is collection of examples flow layouts for collection view.
 
 ## Layouts
-- .carousel
-
-![carousel](Gifs/carousel.gif)
-
-- .horizontalCarousel
-
-![horizontal_carousel](Gifs/horizontal_carousel.gif)
-
-- .stretchyHeader
-
-![strechy_header](Gifs/strechy_header.gif)
+|Layout name | Image |
+|:-----------|-------|
+| **.carousel**| ![strechy_header](Gifs/carousel.gif)|
+| **.horizontalCarousel**| ![strechy_header](Gifs/horizontal_carousel.gif)|
+| **.stretchyHeader**| ![strechy_header](Gifs/strechy_header.gif)|
 
 ## Images
 Images from https://picsum.photos/
