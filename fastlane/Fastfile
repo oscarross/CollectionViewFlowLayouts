@@ -1,0 +1,12 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Create travis build"
+  lane :create_travis_build do
+    xcbuild(
+      scheme: "CollectionViewFlowLayouts",
+      configuration: "Debug",
+      xcargs: "-sdk iphonesimulator SYMROOT='/var/tmp/'"
+    )
+  end
+end

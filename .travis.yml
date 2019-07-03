@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode10.1
+os: osx
+script:
+  - fastlane create_travis_build
